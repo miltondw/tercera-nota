@@ -1,0 +1,30 @@
+# Archivos compilados
+*.class
+*.jar
+*.war
+*.ear
+
+# Directorios de build
+target/
+build/
+bin/
+out/
+
+# Logs
+*.log
+logs/
+
+# Configuraciones de IDE
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias
+lib/

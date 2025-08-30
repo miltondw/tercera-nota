@@ -1,18 +1,9 @@
-## Getting Started
+# Clase de Programación I | 2 semestre de UFPSO
+## Tercera Nota 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este es un proyecto en Java correspondiente a la **tercera nota** de la clase de **Programación I**.
 
-## Folder Structure
+En este repositorio se irán subiendo cada una de las clases vistas durante el curso, utilizando el lenguaje Java.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Link de Notion de las clases
+- [U1: Almacenamiento de datos y control de flujo](https://star-saver-473.notion.site/U1-Almacenamiento-de-datos-y-control-de-flujo-9492d31679414f9db6aa8269cd34e3ae?p=02d4308500f147e3970b893490dfbbc8&pm=s)

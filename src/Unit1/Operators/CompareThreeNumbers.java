@@ -9,8 +9,7 @@ import java.util.Scanner;
  */
 
 public class CompareThreeNumbers {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void run(Scanner sc) {
         System.out.println("Ingresa el Primer Número a comparar : ");
         int n1 = sc.nextInt();
         System.out.println("Ingresa el Segundo Número a comparar : ");
@@ -33,7 +32,11 @@ public class CompareThreeNumbers {
             System.out.println("El resultado es incorrecto");
         }
         System.out.println("El numero mayor es " + max);
+    }
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        run(sc);
         sc.close();
     }
 }

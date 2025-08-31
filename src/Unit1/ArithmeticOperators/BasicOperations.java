@@ -8,8 +8,7 @@ import java.util.Scanner;
  * 
  */
 public class BasicOperations {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void run(Scanner sc) {
         System.out.print("Introduce el primer número: ");
         double num1 = sc.nextDouble();
         System.out.print("Introduce el segundo número: ");
@@ -20,11 +19,16 @@ public class BasicOperations {
         System.out.println("Multiplicación: " + (num1 * num2));
 
         if (num2 != 0) {
-            System.out.println("División: " + (num1 / num2));
+            System.out.printf("División: %.2f\n", (num1 / num2));
             System.out.println("Módulo: " + (num1 % num2));
         } else {
             System.out.println("División y módulo no definidos para divisor 0.");
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        run(sc);
         sc.close();
     }
 }

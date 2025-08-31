@@ -6,7 +6,7 @@ package Unit1.ArithmeticOperators;
  * 
  */
 public class ClothingDiscount {
-    public static void main(String[] args) {
+    public static void run() {
         double shirtPrice = 25;
         double pantsPrice = 30;
         double discount = 0.15;
@@ -25,5 +25,9 @@ public class ClothingDiscount {
 
         System.out.println("Precio segunda camiseta con 15% más 5% descuento: $" + secondShirtDiscounted);
         System.out.println("Total con dos camisetas y un pantalón: $" + totalWithSecondShirt);
+    }
+
+    public static void main(String[] args) {
+        run();
     }
 }

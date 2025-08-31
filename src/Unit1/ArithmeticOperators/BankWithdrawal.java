@@ -6,9 +6,9 @@ package Unit1.ArithmeticOperators;
  * 
  */
 public class BankWithdrawal {
-    public static void main(String[] args) {
-        double initialBalance = 1000;
-        double weeklyWithdrawal = 200;
+    public static void run() {
+        double initialBalance = 1000.0;
+        double weeklyWithdrawal = 200.0;
         int weeks = 4;
         double finalBalance = initialBalance - (weeklyWithdrawal * weeks);
 
@@ -16,5 +16,9 @@ public class BankWithdrawal {
         System.out.println("Cantidad retirada cada semana: $" + weeklyWithdrawal);
         System.out.println("Semanas: " + weeks);
         System.out.println("Saldo final después de un mes: $" + finalBalance);
+    }
+
+    public static void main(String[] args) {
+        run();
     }
 }

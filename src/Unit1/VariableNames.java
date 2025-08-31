@@ -5,7 +5,8 @@ package Unit1;
  */
 
 public class VariableNames {
-    public static void main(String[] args) {
+
+    public static void run() {
         String name = "Milton Estrada";
         char gender = 'M';
         int age = 23;
@@ -25,6 +26,10 @@ public class VariableNames {
         System.out.println("Año de nacimiento : " + YEAR_OF_BIRTH);
         System.out.println("Teléfono:  " + phoneNumber);
         System.out.println("Peso: " + weight + " kg");
+    }
 
+    public static void main(String[] args) {
+
+        run();
     }
 }

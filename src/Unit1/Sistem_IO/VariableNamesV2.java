@@ -8,9 +8,7 @@ package Unit1.Sistem_IO;
 import java.util.Scanner;
 
 public class VariableNamesV2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
+    public static void run(Scanner sc) {
         System.out.print("Nombre Completo: ");
         String name = sc.nextLine();
 
@@ -29,7 +27,7 @@ public class VariableNamesV2 {
         System.out.print("Cantidad de hermanos: ");
         byte siblings = sc.nextByte();
 
-        System.out.print("Año de nacimiento");
+        System.out.print("Año de nacimiento: ");
         short YEAR_OF_BIRTH = sc.nextShort();
 
         System.out.print("Numero Teléfono sin prefijo +: ");
@@ -49,8 +47,11 @@ public class VariableNamesV2 {
                         "Teléfono: %d\n" +
                         "Peso: %.2f kg\n",
                 name, gender, age, height, (isAdult ? "sí" : "no"), siblings, YEAR_OF_BIRTH, phoneNumber, weight);
+    }
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        run(sc);
         sc.close();
-
     }
 }

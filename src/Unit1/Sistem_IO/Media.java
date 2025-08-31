@@ -8,8 +8,7 @@ package Unit1.Sistem_IO;
 import java.util.Scanner;
 
 public class Media {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void run(Scanner sc) {
         System.out.print("Ingrese el primer número: ");
         int n1 = sc.nextInt();
         System.out.print("Ingrese el segundo número: ");
@@ -20,7 +19,11 @@ public class Media {
         double media = (n1 + n2 + n3) / 3.0;
 
         System.out.printf("La media de los números %d, %d, %d es %.2f\n", n1, n2, n3, media);
+    }
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        run(sc);
         sc.close();
     }
 }

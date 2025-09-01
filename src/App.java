@@ -24,21 +24,27 @@ public class App {
                     break;
                 case 2:
                     Unit1.Sistem_IO.VariableNamesV2.run(sc);
+                    sc.nextLine();
                     break;
                 case 3:
                     Unit1.ArithmeticOperators.BasicOperations.run(sc);
+                    sc.nextLine();
                     break;
                 case 4:
                     Unit1.ArithmeticOperators.ClothingDiscount.run();
+                    sc.nextLine();
                     break;
                 case 5:
                     Unit1.ArithmeticOperators.BankWithdrawal.run();
+                    sc.nextLine();
                     break;
                 case 6:
                     Unit1.Sistem_IO.Media.run(sc);
+                    sc.nextLine();
                     break;
                 case 7:
                     Unit1.Operators.CompareThreeNumbers.run(sc);
+                    sc.nextLine();
                     break;
                 case 0:
                     menu = false;
@@ -47,7 +53,7 @@ public class App {
                 default:
                     System.out.println("Opción no válida. Intenta de nuevo.");
             }
-            sc.nextLine();
+            
             if (menu) {
                 System.out.print("\n¿Deseas ejecutar otro ejercicio? (s/n): ");
                 String res = sc.nextLine();

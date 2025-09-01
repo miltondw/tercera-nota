@@ -1,4 +1,4 @@
-# Clase de Programación I | 2 semestre de UFPSO
+### Clase de Programación I | 2 semestre de UFPSO
 ## Tercera Nota 
 
 Este es un proyecto en Java correspondiente a la **tercera nota** de la clase de **Programación I**.

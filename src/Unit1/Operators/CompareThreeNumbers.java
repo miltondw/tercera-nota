@@ -38,5 +38,6 @@ public class CompareThreeNumbers {
         Scanner sc = new Scanner(System.in);
         run(sc);
         sc.close();
+
     }
 }

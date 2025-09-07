@@ -2,6 +2,7 @@ package Unit1.Examples;
 
 import java.util.Scanner;
 
+@SuppressWarnings("all")
 public class ExamplesConditional {
 
     public class ComparacionLogica {

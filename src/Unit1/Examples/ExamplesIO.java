@@ -2,6 +2,7 @@ package Unit1.Examples;
 
 import java.util.Scanner;
 
+@SuppressWarnings("all")
 public class ExamplesIO {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,5 +1,6 @@
 package Unit1.Examples;
 
+@SuppressWarnings("all")
 public class ExampleOperators {
     public static void main(String[] args) {
         int resultado1 = 5 + 3; // resultado es 8

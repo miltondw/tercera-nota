@@ -1,5 +1,6 @@
 package Unit1.Examples;
 
+@SuppressWarnings("all")
 public class ExampleVariable {
     public static void main(String[] args) {
         // Declaración de variables con buenas prácticas de nombrado

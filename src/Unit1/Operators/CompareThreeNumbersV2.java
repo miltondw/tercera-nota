@@ -6,7 +6,7 @@ public class CompareThreeNumbersV2 {
         int num1 = 3;
         int num2 = 5;
         int num3 = 1;
-        int numMax;
+        int numMax = num1;
 
         for (int i = 0; i < 5; i++) {
             if (num1 > num2 && num2 > num3) {
@@ -17,6 +17,7 @@ public class CompareThreeNumbersV2 {
                 numMax = num3;
             }
         }
+        System.out.println("El numero maximo es: " + numMax);
 
     }
 }

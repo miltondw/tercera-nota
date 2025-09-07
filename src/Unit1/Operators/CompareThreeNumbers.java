@@ -16,28 +16,18 @@ public class CompareThreeNumbers {
         int n2 = sc.nextInt();
         System.out.println("Ingresa el Tercer Número a comparar : ");
         int n3 = sc.nextInt();
-        int max;
-        if (n1 >= n2 && n1 >= n3) {
-            max = n1;
-        } else if (n2 >= n1 && n2 >= n3) {
-            max = n2;
-        } else {
-            max = n3;
-        }
-        System.out.printf("¿El primer número (%d) es mayor que el segundo (%d) y menor que el tercero (%d)? \n",
-                n1, n2, n3);
+
         if (n1 > n2 && n1 < n3) {
             System.out.println("El resultado es correcto");
         } else {
             System.out.println("El resultado es incorrecto");
         }
-        System.out.println("El numero mayor es " + max);
+
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         run(sc);
         sc.close();
-
     }
 }

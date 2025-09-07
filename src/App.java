@@ -13,6 +13,12 @@ public class App {
                 "Media de tres números",
                 "Comparar si el primero es mayor que el segundo y menor que el tercero",
                 "Ingresar lista de lenguajes de programación",
+
+                "Determinar el Mayor de Tres Números",
+                "Contador de Números Pares",
+                "Menú Interactivo de caluladora",
+                "Factorial de un Número",
+                "Tabla de Multiplicar",
                 "Salir"
         };
         while (menu) {
@@ -45,9 +51,11 @@ public class App {
                     break;
                 case 2:
                     Unit1.Sistem_IO.VariableNamesV2.run(sc);
+                    sc.nextLine(); // Limpiar buffer después de nextInt, nextDouble, etc.
                     break;
                 case 3:
                     Unit1.ArithmeticOperators.BasicOperations.run(sc);
+                    sc.nextLine();
                     break;
                 case 4:
                     Unit1.ArithmeticOperators.ClothingDiscount.run();
@@ -57,12 +65,24 @@ public class App {
                     break;
                 case 6:
                     Unit1.Sistem_IO.Media.run(sc);
+                    sc.nextLine();
                     break;
                 case 7:
                     Unit1.Operators.CompareThreeNumbers.run(sc);
+                    sc.nextLine();
                     break;
                 case 8:
                     Unit1.Loop.ArrayProgramming.run(sc);
+                    break;
+                case 9:
+                    Unit1.ControlStructure.MaxThreeNumbers.run(sc);
+                    sc.nextLine();
+                    break;
+                case 10:
+                    Unit1.ControlStructure.EvenNumberCounter.run(sc);
+                    break;
+                case 11:
+                    Unit1.ControlStructure.CalculatorMenu.run(sc);
                     break;
             }
             System.out.print("\n¿Deseas ejecutar otro ejercicio? (s/n): ");

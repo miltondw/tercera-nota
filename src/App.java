@@ -47,6 +47,11 @@ public class App {
                 "Sistema de Notas Universitarias"
         };
 
+        // Ejercicios de POO
+        String[] pooItems = {
+                "Gestión de Elección de Horarios"
+        };
+
         while (menu) {
             MenuDesign.clearScreen();
             MenuDesign.printTitle("SISTEMA DE EJERCICIOS DE PROGRAMACIÓN");
@@ -69,8 +74,15 @@ public class App {
                 MenuDesign.printMenuItem(unit2MatrixStart + i, unit2MatrixItems[i]);
             }
 
+            int pooStart = unit2MatrixStart + unit2MatrixItems.length;
+            MenuDesign.printSectionHeader("POO - Programación Orientada a Objetos");
+            for (int i = 0; i < pooItems.length; i++) {
+                MenuDesign.printMenuItem(pooStart + i, pooItems[i]);
+            }
+
             System.out.println();
-            int totalOptions = unit1Items.length + unit2ArrayItems.length + unit2MatrixItems.length + 1;
+            int totalOptions = unit1Items.length + unit2ArrayItems.length + unit2MatrixItems.length + pooItems.length
+                    + 1;
             MenuDesign.printSpecialMenuItem(totalOptions, "Salir");
 
             System.out.println();
@@ -108,8 +120,11 @@ public class App {
                 exerciseName = unit1Items[option - 1];
             } else if (option <= unit1Items.length + unit2ArrayItems.length) {
                 exerciseName = unit2ArrayItems[option - unit1Items.length - 1];
-            } else {
+            } else if (option <= unit1Items.length + unit2ArrayItems.length + unit2MatrixItems.length) {
                 exerciseName = unit2MatrixItems[option - unit1Items.length - unit2ArrayItems.length - 1];
+            } else {
+                exerciseName = pooItems[option - unit1Items.length - unit2ArrayItems.length - unit2MatrixItems.length
+                        - 1];
             }
 
             MenuDesign.printExecuting(exerciseName);
@@ -213,6 +228,11 @@ public class App {
                     break;
                 case 29:
                     Unit2.Matrices.UniversityGradeSystem.run(sc);
+                    break;
+
+                // ========== POO ==========
+                case 30:
+                    POO.GestionEleccionHorarios.services.GestionHorarios.run(sc);
                     break;
             }
 

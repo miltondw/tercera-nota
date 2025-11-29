@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentAgeManager {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
 
         // Declaración de los vectores
         ArrayList<String> nombresEstudiantes = new ArrayList<>();
@@ -41,7 +40,5 @@ public class StudentAgeManager {
 
         System.out.println("Estudiantes mayores de edad: " + estudiantesMayoresEdad);
         System.out.println("Estudiantes con más de 18: " + masMayor);
-
-        consola.close();
     }
 }

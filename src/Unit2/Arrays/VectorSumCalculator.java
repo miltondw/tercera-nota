@@ -3,8 +3,7 @@ package Unit2.Arrays;
 import java.util.Scanner;
 
 public class VectorSumCalculator {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al Sistema de suma de vectores ***");
 
         // Declaración de los tres vectores
@@ -32,7 +31,5 @@ public class VectorSumCalculator {
             System.out.println("El resultado de la suma de la columna " + (i + 1) +
                     " del vector 1 y el vector 2 es: " + vector3[i]);
         }
-
-        consola.close();
     }
 }

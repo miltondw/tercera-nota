@@ -1,10 +1,13 @@
 import java.util.Scanner;
+import UI.MenuDesign;
 
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean menu = true;
-        String[] items = {
+
+        // Ejercicios de la Unidad 1
+        String[] unit1Items = {
                 "Variables del usuario con los valores asignados",
                 "Ejercicio de solicitud de valores al usuario",
                 "Operaciones aritméticas",
@@ -13,45 +16,112 @@ public class App {
                 "Media de tres números",
                 "Comparar si el primero es mayor que el segundo y menor que el tercero",
                 "Ingresar lista de lenguajes de programación",
-
                 "Determinar el Mayor de Tres Números",
                 "Contador de Números Pares",
-                "Menú Interactivo de caluladora",
+                "Menú Interactivo de calculadora",
                 "Factorial de un Número",
-                "Tabla de Multiplicar",
-                "Salir"
+                "Tabla de Multiplicar"
         };
+
+        // Ejercicios de la Unidad 2 - Arrays
+        String[] unit2ArrayItems = {
+                "Calculadora de Potencias (Cuadrado y Cubo)",
+                "Copia Inversa de Array",
+                "Analizador de Notas",
+                "Validador de Números Positivos",
+                "Ordenador de Arrays",
+                "Selector de Días del Mes",
+                "Calculadora de Suma de Vectores",
+                "Gestor de Edad de Estudiantes",
+                "Analizador de Temperaturas"
+        };
+
+        // Ejercicios de la Unidad 2 - Matrices
+        String[] unit2MatrixItems = {
+                "Suma de Filas y Columnas de Matriz",
+                "Generador de Matriz Diagonal",
+                "Matriz con Marco de Bordes",
+                "Kilómetros Semanales de Conductores",
+                "Sistema de Gestión de Inventario",
+                "Administrador de Quiniela de Fútbol",
+                "Sistema de Notas Universitarias"
+        };
+
         while (menu) {
-            System.out.println("\n=== MENÚ DE EJERCICIOS UNIDAD 1 ===");
-            for (int i = 0; i < items.length; i++) {
-                System.out.printf("%d. %s\n", i + 1, items[i]);
+            MenuDesign.clearScreen();
+            MenuDesign.printTitle("SISTEMA DE EJERCICIOS DE PROGRAMACIÓN");
+
+            System.out.println();
+            MenuDesign.printSectionHeader("UNIDAD 1 - Fundamentos");
+            for (int i = 0; i < unit1Items.length; i++) {
+                MenuDesign.printMenuItem(i + 1, unit1Items[i]);
             }
-            System.out.print("Elige una opción: ");
+
+            int unit2Start = unit1Items.length + 1;
+            MenuDesign.printSectionHeader("UNIDAD 2 - Arrays");
+            for (int i = 0; i < unit2ArrayItems.length; i++) {
+                MenuDesign.printMenuItem(unit2Start + i, unit2ArrayItems[i]);
+            }
+
+            int unit2MatrixStart = unit2Start + unit2ArrayItems.length;
+            MenuDesign.printSectionHeader("UNIDAD 2 - Matrices");
+            for (int i = 0; i < unit2MatrixItems.length; i++) {
+                MenuDesign.printMenuItem(unit2MatrixStart + i, unit2MatrixItems[i]);
+            }
+
+            System.out.println();
+            int totalOptions = unit1Items.length + unit2ArrayItems.length + unit2MatrixItems.length + 1;
+            MenuDesign.printSpecialMenuItem(totalOptions, "Salir");
+
+            System.out.println();
+            MenuDesign.printDoubleSeparator();
+            MenuDesign.printPrompt("Elige una opción: ");
+
             String input = sc.nextLine();
             int option;
+
             try {
                 option = Integer.parseInt(input.trim());
             } catch (NumberFormatException e) {
-                System.out.println("Opción inválida. Ingresa un número.");
+                MenuDesign.printError("Opción inválida. Ingresa un número.");
+                MenuDesign.pause();
+                sc.nextLine();
                 continue;
             }
-            if (option < 1 || option > items.length) {
-                System.out.println("Opción fuera de rango. Intenta de nuevo.");
+
+            if (option < 1 || option > totalOptions) {
+                MenuDesign.printError("Opción fuera de rango. Intenta de nuevo.");
+                MenuDesign.pause();
+                sc.nextLine();
                 continue;
             }
-            if (option == items.length) {
+
+            if (option == totalOptions) {
                 menu = false;
-                System.out.println("¡Hasta luego!");
+                MenuDesign.printGoodbye();
                 break;
             }
-            System.out.println("\n-- Ejecución del Ejercicio: " + items[option - 1] + " --\n");
+
+            // Determinar qué ejercicio ejecutar
+            String exerciseName = "";
+            if (option <= unit1Items.length) {
+                exerciseName = unit1Items[option - 1];
+            } else if (option <= unit1Items.length + unit2ArrayItems.length) {
+                exerciseName = unit2ArrayItems[option - unit1Items.length - 1];
+            } else {
+                exerciseName = unit2MatrixItems[option - unit1Items.length - unit2ArrayItems.length - 1];
+            }
+
+            MenuDesign.printExecuting(exerciseName);
+
             switch (option) {
+                // ========== UNIDAD 1 ==========
                 case 1:
                     Unit1.VariableNames.run();
                     break;
                 case 2:
                     Unit1.Sistem_IO.VariableNamesV2.run(sc);
-                    sc.nextLine(); // Limpiar buffer después de nextInt, nextDouble, etc.
+                    sc.nextLine();
                     break;
                 case 3:
                     Unit1.ArithmeticOperators.BasicOperations.run(sc);
@@ -84,12 +154,76 @@ public class App {
                 case 11:
                     Unit1.ControlStructure.CalculatorMenu.run(sc);
                     break;
+                case 12:
+                    Unit1.ControlStructure.FactorialNumber.run(sc);
+                    sc.nextLine();
+                    break;
+                case 13:
+                    Unit1.ControlStructure.MultiplicationTable.run(sc);
+                    sc.nextLine();
+                    break;
+
+                // ========== UNIDAD 2 - ARRAYS ==========
+                case 14:
+                    Unit2.Arrays.PowerCalculator.run();
+                    break;
+                case 15:
+                    Unit2.Arrays.ReverseArrayCopy.run(sc);
+                    break;
+                case 16:
+                    Unit2.Arrays.GradeAnalyzer.run(sc);
+                    break;
+                case 17:
+                    Unit2.Arrays.PositiveNumberValidator.run(sc);
+                    break;
+                case 18:
+                    Unit2.Arrays.ArraySorter.run();
+                    break;
+                case 19:
+                    Unit2.Arrays.MonthDaysSelector.run(sc);
+                    break;
+                case 20:
+                    Unit2.Arrays.VectorSumCalculator.run(sc);
+                    break;
+                case 21:
+                    Unit2.Arrays.StudentAgeManager.run(sc);
+                    break;
+                case 22:
+                    Unit2.Arrays.TemperatureAnalyzer.run(sc);
+                    break;
+
+                // ========== UNIDAD 2 - MATRICES ==========
+                case 23:
+                    Unit2.Matrices.MatrixRowColumnSum.run(sc);
+                    break;
+                case 24:
+                    Unit2.Matrices.DiagonalMatrixGenerator.run(sc);
+                    break;
+                case 25:
+                    Unit2.Matrices.BorderFrameMatrix.run();
+                    break;
+                case 26:
+                    Unit2.Matrices.DriverWeeklyKilometers.run(sc);
+                    break;
+                case 27:
+                    Unit2.Matrices.InventoryManagementSystem.run(sc);
+                    break;
+                case 28:
+                    Unit2.Matrices.SoccerPoolManager.run(sc);
+                    break;
+                case 29:
+                    Unit2.Matrices.UniversityGradeSystem.run(sc);
+                    break;
             }
-            System.out.print("\n¿Deseas ejecutar otro ejercicio? (s/n): ");
+
+            System.out.println();
+            MenuDesign.printDoubleSeparator();
+            MenuDesign.printPrompt("¿Deseas ejecutar otro ejercicio? (s/n): ");
+
             String res = sc.nextLine();
             if (!res.equalsIgnoreCase("s")) {
                 menu = false;
-                System.out.println("¡Hasta luego!");
+                MenuDesign.printGoodbye();
             }
         }
         sc.close();

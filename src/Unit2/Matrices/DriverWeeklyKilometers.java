@@ -3,8 +3,7 @@ package Unit2.Matrices;
 import java.util.Scanner;
 
 public class DriverWeeklyKilometers {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al sistema de transporte ***");
 
         // Vector para guardar los nombres de los conductores

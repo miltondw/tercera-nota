@@ -4,9 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class GradeAnalyzer {
-    public static void main(String[] args) {
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al Sistema de notas ***");
-        Scanner consola = new Scanner(System.in);
 
         // Vector para las notas
         int[] notas = new int[5];
@@ -42,7 +41,5 @@ public class GradeAnalyzer {
         System.out.println("La nota más alta es: " + notaAlta);
         System.out.println("La nota más baja es: " + notaBaja);
         System.out.println("La nota media es: " + notaMedia);
-
-        consola.close();
     }
 }

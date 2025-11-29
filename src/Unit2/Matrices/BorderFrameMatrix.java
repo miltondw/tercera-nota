@@ -1,11 +1,8 @@
 package Unit2.Matrices;
 
-import java.util.Scanner;
-
 public class BorderFrameMatrix {
-    public static void main(String[] args) {
+    public static void run() {
         System.out.println("*** Bienvenido al marco 5x15 con limites (1) ***");
-        Scanner consola = new Scanner(System.in);
 
         // Declaración de la matriz (5x15)
         int[][] marco = new int[5][15];
@@ -32,7 +29,5 @@ public class BorderFrameMatrix {
             // una al lado de la otra.
             System.out.println();
         }
-
-        consola.close();
     }
 }

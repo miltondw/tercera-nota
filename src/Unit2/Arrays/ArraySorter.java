@@ -3,7 +3,7 @@ package Unit2.Arrays;
 import java.util.Arrays;
 
 public class ArraySorter {
-    public static void main(String[] args) {
+    public static void run() {
         System.out.println("*** Bienvenido al sistema de orden de números ***");
         int[] numeros = { 1, 45, 60, 54, 0, 30, 5, 3, 7, 2 };
         int tamañoVector = numeros.length;

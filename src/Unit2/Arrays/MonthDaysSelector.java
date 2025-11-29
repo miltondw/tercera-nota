@@ -3,9 +3,8 @@ package Unit2.Arrays;
 import java.util.Scanner;
 
 public class MonthDaysSelector {
-    public static void main(String[] args) {
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al Sistema de meses ***");
-        Scanner consola = new Scanner(System.in);
 
         // Creacion de los vectores
         String[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
@@ -57,7 +56,5 @@ public class MonthDaysSelector {
                 System.out.println("Número de mes inválido");
                 break;
         }
-
-        consola.close();
     }
 }

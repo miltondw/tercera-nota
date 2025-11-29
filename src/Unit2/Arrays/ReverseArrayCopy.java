@@ -3,9 +3,8 @@ package Unit2.Arrays;
 import java.util.Scanner;
 
 public class ReverseArrayCopy {
-    public static void main(String[] args) {
+    public static void run(Scanner consola) {
         // Para pedir datos por teclado
-        Scanner consola = new Scanner(System.in);
 
         // Creacion del vector para las 5 cadenas
         String[] cadenas = new String[5];
@@ -31,7 +30,5 @@ public class ReverseArrayCopy {
             System.out.println("Valor " + (i + 1) + " del vector original: " + cadenas[i] +
                     " y del vector inverso: " + copiaCadenas[i]);
         }
-
-        consola.close();
     }
 }

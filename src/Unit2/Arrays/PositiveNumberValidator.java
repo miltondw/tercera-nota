@@ -3,8 +3,7 @@ package Unit2.Arrays;
 import java.util.Scanner;
 
 public class PositiveNumberValidator {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al sistema de numeros positivos ***");
 
         int[] numeros = new int[10];
@@ -28,7 +27,5 @@ public class PositiveNumberValidator {
         for (int i = 0; i < iteraciones - 1; i++) {
             System.out.println("El valor del dato " + (i + 1) + " es: " + numeros[i]);
         }
-
-        consola.close();
     }
 }

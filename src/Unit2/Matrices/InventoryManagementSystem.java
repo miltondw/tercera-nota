@@ -3,9 +3,8 @@ package Unit2.Matrices;
 import java.util.Scanner;
 
 public class InventoryManagementSystem {
-    public static void main(String[] args) {
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al sistema de inventarios ***");
-        Scanner consola = new Scanner(System.in);
 
         // Declaración del vector para los precios (5 productos)
         float[] precios = new float[5];
@@ -80,7 +79,5 @@ public class InventoryManagementSystem {
         }
         System.out.println("La sucursal de mayor recaudación es: " + numSucursalMayor);
         System.out.println("La recaudación total de la empresa es de: " + recaudacionEmpresa);
-
-        consola.close();
     }
 }

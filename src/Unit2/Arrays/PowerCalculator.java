@@ -1,7 +1,7 @@
 package Unit2.Arrays;
 
 public class PowerCalculator {
-    public static void main(String[] args) {
+    public static void run() {
         // Definicion y inicializacion del vector
         int[] vectorNumeros = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int tamañoVector = vectorNumeros.length;

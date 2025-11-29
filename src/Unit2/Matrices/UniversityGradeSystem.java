@@ -3,9 +3,8 @@ package Unit2.Matrices;
 import java.util.Scanner;
 
 public class UniversityGradeSystem {
-    public static void main(String[] args) {
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al sistema de la universidad ***");
-        Scanner consola = new Scanner(System.in);
 
         String[] nombres = new String[5];
         float[] n1 = new float[5];
@@ -49,7 +48,5 @@ public class UniversityGradeSystem {
         }
 
         System.out.println("\nNota mayor: " + notaMay);
-
-        consola.close();
     }
 }

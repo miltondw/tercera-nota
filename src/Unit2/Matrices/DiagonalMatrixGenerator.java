@@ -3,8 +3,7 @@ package Unit2.Matrices;
 import java.util.Scanner;
 
 public class DiagonalMatrixGenerator {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido a la tabla bidimensional ***");
 
         // Creación de la tabla bidimensional (matriz) 5x5
@@ -39,7 +38,5 @@ public class DiagonalMatrixGenerator {
             // Salto de linea para que cada fila quede debajo de la otra
             System.out.println();
         }
-
-        consola.close();
     }
 }

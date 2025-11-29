@@ -3,8 +3,7 @@ package Unit2.Arrays;
 import java.util.Scanner;
 
 public class TemperatureAnalyzer {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al sistema de temperaturas ***");
         System.out.println("__________________________________________________________________");
 
@@ -70,7 +69,5 @@ public class TemperatureAnalyzer {
         } else {
             System.out.println();
         }
-
-        consola.close();
     }
 }

@@ -3,8 +3,7 @@ package Unit2.Matrices;
 import java.util.Scanner;
 
 public class MatrixRowColumnSum {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido a la tabla bidimensional ***");
 
         // Creacion de la matriz
@@ -39,7 +38,5 @@ public class MatrixRowColumnSum {
             }
             System.out.println("La suma de la columna " + (i + 1) + " es: " + sumacolumnas);
         }
-
-        consola.close();
     }
 }

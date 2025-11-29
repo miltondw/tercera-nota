@@ -3,8 +3,7 @@ package Unit2.Matrices;
 import java.util.Scanner;
 
 public class SoccerPoolManager {
-    public static void main(String[] args) {
-        Scanner consola = new Scanner(System.in);
+    public static void run(Scanner consola) {
         System.out.println("*** Bienvenido al sistema de administración de la quiniela ***");
 
         // Declaración de un array donde se van a guardar los nombres de los equipos
@@ -82,7 +81,5 @@ public class SoccerPoolManager {
                 System.out.println("***************************************************************************+");
             }
         }
-
-        consola.close();
     }
 }

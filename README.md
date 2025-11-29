@@ -39,7 +39,6 @@ src/
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Java SE 8+**
 - **Scanner** para entrada de datos
 - **ArrayList** para estructuras dinámicas
 - **Enums** para tipos seguros
@@ -51,9 +50,6 @@ src/
 javac src/App.java -d bin
 java -cp bin App
 ```
-
-### Ejecutar con VS Code Task:
-Usar la tarea configurada: **"Compilar y ejecutar TicTacToe"**
 
 ## 📖 Contenido por Unidades
 
@@ -80,10 +76,6 @@ Usar la tarea configurada: **"Compilar y ejecutar TicTacToe"**
 
 ## 👨‍💻 Autor
 
-**Milton Daza**  
+**Milton Estrada**  
 Universidad Francisco de Paula Santander Ocaña  
 Programación I - 2º Semestre 2025
-
----
-
-⭐ Si este proyecto te fue útil, no olvides darle una estrella!

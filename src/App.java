@@ -49,7 +49,8 @@ public class App {
 
         // Ejercicios de POO
         String[] pooItems = {
-                "Gestión de Elección de Horarios"
+                "Gestión de Elección de Horarios",
+                "Gestión de Parqueadero"
         };
 
         while (menu) {
@@ -233,6 +234,10 @@ public class App {
                 // ========== POO ==========
                 case 30:
                     POO.GestionEleccionHorarios.services.GestionHorarios.run(sc);
+                    break;
+
+                case 31:
+                    POO.GestionParqueadero.services.GestionParqueadero.run(sc);
                     break;
             }
 
